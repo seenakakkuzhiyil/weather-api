@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <title>Weather API</title>
+  
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="styling.css" rel="stylesheet">
+      <link href="https://fonts.googleapis.com/css?family=Arvo&display=swap" rel="stylesheet">
+    <script src = "scripttest.js"></script>
+    
+  </head>
+  <script>
+  function getDetailOne() {
+    //http connection established and gets the value retrived from the getCoordinates.php page
+    var xhr = new XMLHttpRequest();
+    var cont = document.getElementById("country").value;
+    xhr.open("GET", "getCoordinates.php?country="+cont, true);
+    xhr.send();
+    xhr.onreadystatechange = function () {
+        if (xhr.readyState == 4 && xhr.status == 200) {
+           // console.log(xhr);
+           //value retrived is stored in this div element
+            document.getElementById("coordinatesOne").innerHTML = xhr.responseText;
+           //alert(xhr.responseText);
+           //hidden as this is not required to be shown to the user.
+           $("#coordinatesOne").hide();
+        }
+    }
+}
+  
+function getDetailTwo() {
+  //http connection established and gets the value retrived from the getCoordinates.php page
+    var xhr = new XMLHttpRequest();
+    var cont = document.getElementById("country").value;
+    xhr.open("GET", "get-coordinates.php?country="+cont, true);
+    xhr.send();
+    xhr.onreadystatechange = function () {
+        if (xhr.readyState == 4 && xhr.status == 200) {
+             //value retrived is stored in this div element
+            document.getElementById("coordinatesTwo").innerHTML = xhr.responseText;
+           //hidden as this is not required to be shown to the user.
+           $("#coordinatesTwo").hide();
+        }
+    }
+}
+
+
+  </script>
+  <body>
+<!-- Create navigation bar-->
+      <nav class="navbar navbar-inverse" role="naviagation">
+      <div class="container-fluid">
+          <div class="navbar-header">
+          
+            <h1>Weather API</h1>
+              
+          
+          </div>
+          
+          
+    </div>
+      
+      </nav>
+      
+      <div class="container-fluid">
+        <div id="row">
+            <div class="col-md-6 col-lg-6">
+                    <p>Select a city from the dropdown:</p>
+            </div>
+            <div class="col-md-6 col-lg-6 customselectblock">
+                    <label for="country">Countries:</label>
+                    <select id="country" class="dropdown customselect" onchange="getDetailOne(); getDetailTwo();">
+                        <option selected disabled>Select Country</option>
+                        <option value="Vancouver">Vancouver, BC</option>
+                        <option value="Germany">Berlin, Germany</option>
+                        <option value="Japan">Tokyo, Japan</option>
+                        <option value="New Zealand">Auckland, New Zealand</option>
+                        <option value="India">Kolkata, India</option>
+                        <option value="Kenya">Nairobi, Kenya</option>
+                        <option value="Toronto">Toronto, Ontario</option>
+                    </select>
+            </div>
+            <br />
+            <br />
+            <br />
+           
+        </div>
+        <!-- The below div elements are hidden as there are not required to be shown to the user -->
+        <div id ="row" >
+          <div class ="col-md-6">
+              <p id="coordinatesOne"></p>
+          </div>
+          <div class ="col-md-6">
+            <p id="coordinatesTwo"></p>
+          </div>
+        </div>
+
+        <div id ="row">
+          <div class ="col-md-4">
+              
+          </div>
+          <div class ="col-md-4">
+            <button class ="btn-primary getweatherbtn" onclick="getTable();">Get Weather</button>
+          </div>
+          <div class ="col-md-4">
+            
+          </div>
+        </div>
+       <br />
+        <div id ="row">
+          <div id ="update">
+
+          </div>
+        </div>
+       
+      </div>
+      
+<div class="footer">
+      <div class="container">
+    <p>&copy; Developed by Seena Kakkuzhiyil</p>
+    </div>
+      
+      </div>
+      
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    
+    <script src="js/bootstrap.min.js"></script>
+  </body>
+</html>

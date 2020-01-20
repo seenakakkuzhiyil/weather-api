@@ -1,0 +1,164 @@
+
+body
+{
+    background: url(https://freenaturestock.s3.amazonaws.com/1537.jpg) no-repeat center center;
+    background-attachment: fixed;
+    background-size: cover;
+    font-family: Arvo, serif;
+    
+}
+
+.navbar-header{
+    border:none;
+}
+.navbar-header h1
+{
+    color:rgba(224, 198, 181, 0.877);
+
+}
+.navbar-inverse
+{
+    background-color: rgba(0,0,0,0.5);
+    border-color: rgba(0,0,0,0);
+}
+
+.customselect
+{
+    width: 300px;
+    height:35px;
+}
+.customselectblock label
+{
+    font-size:16px;
+    margin-right:10px;
+    color:rgba(224, 198, 181, 0.877);
+}
+
+#row p{
+    color:rgba(224, 198, 181, 0.877);
+    font-size:30px;;
+    
+}
+.customselectblock
+{
+    margin-top:8px;
+    
+}
+#coordinatesOne p{
+    color:rgba(224, 198, 181, 0.877);
+    font-size:20px;
+}
+
+.btn-primary{
+    margin-bottom: 30px;
+    padding-bottom:10px;
+    background-color: rgba(224, 198, 181, 0.877);
+    height:40px;
+    width: 400px;
+    color: black;
+    border-color: rgba(224, 198, 181, 0.877);
+    
+}
+.btn-primary:hover
+{
+    background-color: rgba(224, 198, 181, 0.2);
+    border-color:  rgba(224, 198, 181, 0.2);
+}
+.btn-primary:active
+{
+    background-color: rgba(224, 198, 181, 0.2);
+    border-color:  rgba(224, 198, 181, 0.2);
+}
+.btn-primary:focus
+{
+    background-color: rgba(224, 198, 181, 0.2);
+    border-color:  rgba(224, 198, 181, 0.2);
+}
+
+.table{
+    color: rgba(255, 251, 249, 0.986);
+    font-weight:bold;
+    font-size: 20px;
+    margin-top:20px;
+    margin: auto;
+    width: 50% !important; 
+     
+}
+
+.table th td {
+    height: 30px;
+    
+}
+
+.table td{
+    text-align:center;
+}
+
+.col-md-6
+{
+    text-align:center;
+}
+.col-md-4
+{
+    text-align:center;
+}
+
+.container
+{
+    max-width:1000px;
+}
+
+
+.footer
+{
+    background-color: rgba(0,0,0,0.5);
+    color: rgba(224, 198, 181, 0.877);
+    width:100%;
+    font-size:15px;
+    text-align: center;
+    padding: 10px 0;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+}
+
+h2{
+    color:#00FFBB;
+    margin-bottom:30px;
+}
+.tableview th{
+    font-weight:bold;
+    font-size:20px;
+    
+}
+.tableview tr{
+    text-align:left;
+    font-size:15px;
+}
+
+.tableview a{
+    color:#00FFB8;
+}
+
+.formview
+{
+   
+    font-size:20px;
+}
+.formview input[type=text]{
+    width: 300px;
+    margin-top:15px;
+}
+
+.table-bordered tr{
+    
+    border:2px solid;
+}
+@media (max-width: 768px)
+{
+    .bodyimage
+    {
+        height:70px;
+        
+    }
+}
