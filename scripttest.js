@@ -6,7 +6,7 @@ function getTable()
     $(document).ready(function () {
     //proxy is used for smooth running of api used (DarkSky API), proxy reference is from stack overflow
     var proxy = 'https://cors-anywhere.herokuapp.com/';
-    var urll = "https://api.darksky.net/forecast/e37c26aa533779cb49322ebd7bc79ae4/"+ lat + "," + lon+ "";
+    var urll = "";// use your api key here
   
     $.ajax({
       url: proxy + urll,
